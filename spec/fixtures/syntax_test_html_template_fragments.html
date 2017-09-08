@@ -22,6 +22,7 @@
             <ul>
             <!-- <- text.embedded.html -->
                 <li ng-repeat="item in [1, 2, 3]">Item #{$index}</li>
+                <li ng-repeat="item in something.items"></li>
             </ul>
         </script>
         <!-- <- punctuation.definition.tag.html -->
@@ -32,8 +33,7 @@
             <ul>
             <!-- <- text.embedded.html -->
             {{#each items}}
-                <li>Item {{@index}}</li>
-            </ul>
+                <li>Item {{@index}}</li            </ul>
         </script>
         <!-- <- punctuation.definition.tag.html -->
     </body>

@@ -23,7 +23,7 @@
     x?html
   (?=\\s|:|$)
 '''
-'name': 'HTML (ng2)'
+'name': 'HTML (ng)'
 'patterns': [
   # removed to allow custom angular template tags
   # {
@@ -352,6 +352,17 @@
   }
   {
     'include': '#tag-ng-interpolation'
+  }
+  {
+    'match': 'ng-repeat=\\"([\\w]+)\\sin\\s([\\w]+).([\\w]+).\\"'
+    'captures':
+        '1':
+            'name': 'entity.repeat-element.html.ng'
+        '2':
+            'name': 'entity.controller.html.ng'
+        '3':
+            'name': 'entity.iterable.html.ng'
+    'name': 'meta.repeat.html.ng'
   }
 ]
 'repository':
